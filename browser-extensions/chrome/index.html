@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>XBMControlCenter</title>
+<!--<link rel="shortcut icon" href="icon.png" type="image/x-icon" />-->
+<link rel="stylesheet" type="text/css" href="index.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.css"/>
+<script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="js/jquery-ui-1.10.3.js" type="text/javascript"></script>
+<script src="js/jquery.ui.splitButton.js" type="text/javascript"></script>
+<script src="index.js" type="text/javascript"></script>
+</head>
+<body>
+<div>
+	<a id="rerun">Edit</a>
+	<a href="#">Menu</a>
+</div>
+<ul style="display:none;">
+	<li><a href="/print/1">Print</a></li>
+	<li><a href="/copy/1">Copy</a></li>
+	<li><a href="/delete/1">Delete</a></li>
+</ul>
+
+<script>
+    $(function() {
+        $(".split-button").splitButton();
+    });
+</script>
+<input type="text" id="url"/><button id="play">play</button><a id="add">add to</a>
+<div id="menu">
+	<ul>
+		<li><a href="#playlist">Playlist</a></li>
+		<li><a href="#config">Configuration</a></li>
+	</ul>
+	<div id="playlist">
+		<table id="sort" class="grid" title="Kurt Vonnegut novels">
+	<thead>
+		<tr><th>Year</th><th>Title</th><th>Grade</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>1969</td><td>Slaughterhouse-Five</td><td>A+</td></tr>
+		<tr><td>1952</td><td>Player Piano</td><td>B</td></tr>
+		<tr><td>1963</td><td>Cat's Cradle</td><td>A+</td></tr>
+		<tr><td>1973</td><td>Breakfast of Champions</td><td>C</td></tr>
+		<tr><td>1965</td><td>God Bless You, Mr. Rosewater</td><td>A</td></tr>
+	</tbody>
+</table>
+	</div>
+	<div id="config">
+		<label for="ip">IP-Adress:</label><input type="text" id="ip"/>
+	</div>
+</div>
+</body>
+</html>

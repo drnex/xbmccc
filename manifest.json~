@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "XBMControlCenter",
+  "description": "This extension provides some XBMC remote functions",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "open.js"
+  },
+  "background": {
+    "scripts": ["open.js"],
+    "persistent": false
+  }
+}
