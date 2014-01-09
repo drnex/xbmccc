@@ -12,3 +12,34 @@ input[type=text]{
 	padding: 3px;
 	margin: 5px;
 }
+select#playlists{
+	float: left;
+	width: 20%;
+}
+table#playlist{
+	float: right;
+}
+tbody tr{
+	cursor:pointer;
+	cursor:hand;
+}
+
+div#time{
+	width: 95%;
+	margin-bottom: 10px;
+	float: left;
+}
+span#time{
+	margin-left: 10px;
+}
+div#volume{
+	float: left;
+	width: 20%;
+}
+div.ui-slider-range.ui-widget-header {
+    background: #1484e6 url(css/images/ui-bg_diagonals-thick_22_1484e6_40x40.png) 50% 50%;
+}
+a.ui-slider-handle.ui-state-default.ui-corner-all{
+	width: 4px;
+	margin-left: -1px;
+}
