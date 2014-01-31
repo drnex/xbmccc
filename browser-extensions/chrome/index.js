@@ -1,13 +1,13 @@
-	var xbian = new XBian("http://192.168.2.200:8080");
 
 $(function() {
+	var xbian = new XBian("http://192.168.2.200:8080");
+
 	//verticalTabs();
-	xbian.getTimeInSeconds();
 	$("#menu").tabs();
 	$("button").button();
 	$("table#playlist tbody").sortable().disableSelection();
 	$("div#time").slider({
-		value: 100,
+		value: 0,
 		orientation: "horizontal",
 		range: "min",
 		animate: true
@@ -21,6 +21,11 @@ $(function() {
 			xbian.setVolume(ui.value);		
 		}
     });
+	if(xbian.ping()!="pong"){		
+		$("div#overlay").toggle();
+		//TODO Meldung: xbmc off	
+	}
+	console.log(xbian.ping());
 	//EventListener
 });
 var testConnection = function(){
@@ -41,3 +46,10 @@ var loadConfig = function(){
 var loadPlaylist = function(name){
 	//TODO
 };
+
+Number.prototype.addZero = function(){
+	if(this.valueOf()<10){
+		return "0"+this.valueOf();	
+	}
+	return this.valueOf();
+}

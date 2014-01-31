@@ -11,13 +11,21 @@ input[type=text]{
 	font-size: 1.1em;
 	padding: 3px;
 	margin: 5px;
-}
+}/*
+select{
+	width: 200px;
+}*/
 select#playlists{
-	float: left;
-	width: 20%;
+	float: left;	
+	width: 200px;
 }
 table#playlist{
 	float: right;
+	margin-bottom: 5px;
+	width: 80%;
+}
+table, th, tr, td{
+	border:1px solid gray;
 }
 tbody tr{
 	cursor:pointer;
@@ -25,7 +33,7 @@ tbody tr{
 }
 
 div#time{
-	width: 95%;
+	width: 88%;
 	margin-bottom: 10px;
 	float: left;
 }
@@ -42,4 +50,18 @@ div.ui-slider-range.ui-widget-header {
 a.ui-slider-handle.ui-state-default.ui-corner-all{
 	width: 4px;
 	margin-left: -1px;
+}
+div#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 10000;
+	display: none;
 }
